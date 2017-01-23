@@ -1,24 +1,12 @@
 #!/usr/bin/env python
 
 import json
-from datetime import datetime, timedelta
 import pytz
+from datetime import datetime, timedelta
 
 class Event(object):
-    def __init__(self, catg, date, topic, numS = None, defaults = None):
+    def __init__(self, catg, date, num, topic, defaults = None):
         self.catg = catg
-
-        if numS == None or numS == '--':
-            self.topic = topic
-            self.url   = ''
-        else:
-            self.topic = numS + ' ' + topic
-            self.url   = catg + numS + '/'
-
-        if defaults != None and 'room' in defaults:
-            self.room = defaults['room']
-        else:
-            self.room = 'UW Seattle'
 
         if defaults != None and 'time' in defaults:
             time = datetime.strptime(defaults['time'], '%H:%M')
@@ -36,19 +24,33 @@ class Event(object):
                 mins = int(defaults['length'])
                 self.end = self.start + timedelta(0, mins * 60)
             else:
+                # a time without length indicates a deadline
                 self.end = self.start
         else:
             # a date without time indicates whole day event
             self.start = date
-            self.end  = date + timedelta(1, 0)
+            self.end = date + timedelta(1, 0)
+
+        if num == -1:
+            self.topic = topic
+            self.url = ''
+        else:
+            numS = "%02d" % num
+            self.topic = numS + ' ' + topic
+            self.url = catg + numS + '/'
+
+        if defaults != None and 'room' in defaults:
+            self.room = defaults['room']
+        else:
+            self.room = 'UW Seattle'
 
     def __str__(self):
         kvs = "\n, ".join([ '"catg"  : "%s"' % self.catg
+                          , '"start" : "%s"' % self.start.strftime("%Y-%m-%d %H:%M")
+                          , '"end"   : "%s"' % self.end.strftime("%Y-%m-%d %H:%M")
                           , '"topic" : "%s"' % self.topic
                           , '"url"   : "%s"' % self.url
                           , '"room"  : "%s"' % self.room
-                          , '"start" : "%s"' % self.start.strftime("%Y-%m-%d %H:%M")
-                          , '"end"   : "%s"' % self.end.strftime("%Y-%m-%d %H:%M")
                           ])
         return "{ %s\n}" % kvs
 
@@ -63,11 +65,10 @@ def expandRepTopics(catg, desc):
     date = datetime.strptime(desc['first'], '%Y-%m-%d')
     for topic in desc['topics']:
         if topic.startswith("--"):
-            numS = "--"
+            events.append(Event(catg, date, -1, topic, desc))
         else:
             num += 1
-            numS = "%02d" % num
-        events.append(Event(catg, date, topic, numS, desc))
+            events.append(Event(catg, date, num, topic, desc))
 
         # get next date
         date = date + timedelta(1, 0)
@@ -82,16 +83,12 @@ def expandEventList(catg, desc):
     for e in desc:
         date = datetime.strptime(e['date'], '%Y-%m-%d')
         topic = e['topic']
-        num += 1
-        numS = "%02d" % num
-        events.append(Event(catg, date, topic, numS, e))
+        if topic.startswith("--"):
+            events.append(Event(catg, date, -1, topic, e))
+        else:
+            num += 1
+            events.append(Event(catg, date, num, topic, e))
     return events
-
-def expand(catg, desc):
-    if hasRepTopics(desc):
-        return expandRepTopics(catg, desc)
-    else:
-        return expandEventList(catg, desc)
 
 def main():
     with open('sched.json') as f:
@@ -99,9 +96,14 @@ def main():
 
     events = []
     for k in sched:
-        events.extend(expand(k, sched[k]))
+        if hasRepTopics(sched[k]):
+            es = expandRepTopics(k, sched[k])
+        else:
+            es = expandEventList(k, sched[k])
+        events.extend(es)
 
-    for e in events:
-        print e
+    with open('sched-expanded.json', 'w') as f:
+        js = '\n,\n'.join([str(e) for e in events])
+        f.write('{ "sched" : [\n%s\n]}' % js)
 
 main()
