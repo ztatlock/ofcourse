@@ -1,0 +1,12 @@
+Include office hours in schedule
+
+, "help" :
+  [ { "topic"  : "Zach Tatlock Office Hours"
+    , "first"  : "2017-01-04"
+    , "repeat" : "Wed"
+    , "time"   : "11:30"
+    , "length" : "50"
+    , "room"   : "CSE 546"
+    }
+  ]
+}

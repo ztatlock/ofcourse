@@ -1,0 +1,138 @@
+{ "lec" :
+  { "first"  : "2017-01-04"
+  , "repeat" : ["Mon", "Wed", "Fri"]
+  , "time"   : "10:30"
+  , "length" : "50"
+  , "room"   : "HCK 132"
+  , "except" : [ { "date"   : "2017-01-16"
+                 , "reason" : "University Holiday"
+                 }
+               , { "date"   : "2017-02-10"
+                 , "reason" : "Midterm"
+                 }
+               , { "date"   : "2017-02-20"
+                 , "reason" : "University Holiday"
+                 }
+               ]
+  , "topics" : [ "Introduction"
+               , "Formal Reasoning"
+               , "Reasoning About Loops"
+               , "Specifications"
+               , "Abstract Data Types"
+               , "Representation Invariants"
+               , "Abstraction Functions"
+               , "Testing"
+               , "Style and Design"
+               , "Equals and Hashcode"
+               , "Assertions and Exceptions"
+               , "Subtyping"
+               , "Generics 1"
+               , "Generics 2"
+               , "Debugging"
+               , "Checker Framework"
+               , "Events, Listeners, Callbacks"
+               , "Java Graphics and GUIs"
+               , "Java GUI Events"
+               , "TBD"
+               , "Design Patterns 1"
+               , "Design Patterns 2"
+               , "System Development 1"
+               , "System Development 2"
+               , "Verifying Sytem Architectures"
+               , "Conclusion"
+               ]
+  }
+, "sec" :
+  { "first"  : "2017-01-05"
+  , "repeat" : "Thu"
+  , "topics" : [ "Hoare Logic and Git"
+               , "Project Setup"
+               , "ADTs and Homework 4"
+               , "Graphs and Testing"
+               , "Interfaces and Homework 6"
+               , "Midterm Review"
+               , "Dijkstra's Algorithm"
+               , "Model View Controller"
+               , "Design Patterns"
+               , "Final Review"
+               ]
+  }
+, "read" :
+  { "first"  : "2017-01-07"
+  , "repeat" : "Sat"
+  , "time"   : "23:00"
+  , "topics" : [ "Get Books"
+               , "Pragmatic Programmer Chapter 1"
+               , "Pragmatic Programmer Chapter 2"
+               , "TBD"
+               , "TBD"
+               , "TBD"
+               , "TBD"
+               , "TBD"
+               , "TBD"
+               , "TBD"
+               ]
+  }
+, "hw" :
+  { "time"   : "23:00"
+  , "assign" : [ { "date"  : "2017-01-09"
+                 , "topic" : "Correctness"
+                 , "time"  : "10:00"
+                 }
+               , { "date"  : "2017-01-13"
+                 , "topic" : "Hoare Logic Basics"
+                 }
+               , { "date"  : "2017-01-18"
+                 , "topic" : "Hoare Logic Loops"
+                 }
+               , { "date"  : "2017-01-23"
+                 , "topic" : "Environment Setup and Java Introduction"
+                 }
+               , { "date"  : "2017-01-30"
+                 , "topic" : "Java and Coding to Specifications"
+                 }
+               , { "date"  : "2017-02-07"
+                 , "topic" : "Designing and Implementing an ADT"
+                 }
+               , { "date"  : "2017-02-14"
+                 , "topic" : "Modeling the Marvel Comics Universe"
+                 }
+               , { "date"  : "2017-02-22"
+                 , "topic" : "Generics and Least-Cost Paths"
+                 }
+               , { "date"  : "2017-03-01"
+                 , "topic" : "Model-View-Controller and Campus Paths"
+                 }
+               , { "date"  : "2017-03-08"
+                 , "topic" : "Campus Paths GUI"
+                 }
+               ]
+  }
+, "exam" :
+  [ { "date"   : "2017-02-10"
+    , "time"   : "10:30"
+    , "length" : "50"
+    , "topic"  : "Midterm"
+    , "room"   : "HCK 132"
+    }
+  , { "date"   : "2017-03-13"
+    , "time"   : "08:30"
+    , "length" : "110"
+    , "topic"  : "Final"
+    , "room"   : "HCK 132"
+    }
+  ]
+, "help" :
+  [ { "who"    : "Zach Tatlock"
+    , "first"  : "2017-01-04"
+    , "repeat" : "Wed"
+    , "time"   : "11:30"
+    , "length" : "50"
+    , "room"   : "CSE 546"
+    , "except" : [ { "date"   : "2017-01-18"
+                   , "reason" : "POPL in Paris"
+                   }
+                 ]
+    }
+  ]
+}
