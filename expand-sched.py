@@ -2,7 +2,11 @@
 
 import json
 import pytz
+import copy
 from datetime import datetime, timedelta
+
+TZ = pytz.timezone('America/Los_Angeles')
+ROOM = 'UW Seattle'
 
 class Event(object):
     def __init__(self, catg, date, num, topic, defaults = None):
@@ -18,7 +22,7 @@ class Event(object):
                       , time.minute
                       , 0
                       , 0
-                      , tzinfo=pytz.timezone('America/Los_Angeles')
+                      , tzinfo = TZ
                       )
             if 'length' in defaults:
                 mins = int(defaults['length'])
@@ -35,14 +39,13 @@ class Event(object):
             self.topic = topic
             self.url = ''
         else:
-            numS = "%02d" % num
-            self.topic = numS + ' ' + topic
-            self.url = catg + numS + '/'
+            self.topic = '%02d %s' % (num, topic)
+            self.url = '%s%02d/' % (catg, num)
 
         if defaults != None and 'room' in defaults:
             self.room = defaults['room']
         else:
-            self.room = 'UW Seattle'
+            self.room = ROOM
 
     def __str__(self):
         kvs = "\n, ".join([ '"catg"  : "%s"' % self.catg
@@ -59,25 +62,23 @@ def hasRepTopics(desc):
        and 'repeat' in desc \
        and 'topics' in desc
 
-def expandRepTopics(catg, desc):
-    events = []
-    num = 0
+def repeatTopics(desc):
+    es = []
     date = datetime.strptime(desc['first'], '%Y-%m-%d')
     for topic in desc['topics']:
-        if topic.startswith("--"):
-            events.append(Event(catg, date, -1, topic, desc))
-        else:
-            num += 1
-            events.append(Event(catg, date, num, topic, desc))
+        e = copy.deepcopy(desc)
+        e['topic'] = topic
+        e['date'] = date.strftime('%Y-%m-%d')
+        es.append(e)
 
         # get next date
         date = date + timedelta(1, 0)
         while not date.strftime("%a") in desc['repeat'] \
           and not date.strftime("%a") == desc['repeat'] :
             date = date + timedelta(1, 0)
-    return events
+    return es
 
-def expandEventList(catg, desc):
+def expandEvents(catg, desc):
     events = []
     num = 0
     for e in desc:
@@ -96,14 +97,14 @@ def main():
 
     events = []
     for k in sched:
-        if hasRepTopics(sched[k]):
-            es = expandRepTopics(k, sched[k])
-        else:
-            es = expandEventList(k, sched[k])
+        es = sched[k]
+        if hasRepTopics(es):
+            es = repeatTopics(es)
+        es = expandEvents(k, es)
         events.extend(es)
 
     with open('sched-expanded.json', 'w') as f:
-        js = '\n,\n'.join([str(e) for e in events])
-        f.write('{ "sched" : [\n%s\n]}' % js)
+        eobjs = '\n,\n'.join([str(e) for e in events])
+        f.write('{ "sched" : [\n%s\n]}' % eobjs)
 
 main()

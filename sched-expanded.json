@@ -74,7 +74,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-01-25 10:30"
 , "end"   : "2017-01-25 11:20"
-, "topic" : "09 Style and Design"
+, "topic" : "09 Checker Framework"
 , "url"   : "Lecture09/"
 , "room"  : "HCK 132"
 }
@@ -82,7 +82,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-01-27 10:30"
 , "end"   : "2017-01-27 11:20"
-, "topic" : "10 Equals and Hashcode"
+, "topic" : "10 Style and Design"
 , "url"   : "Lecture10/"
 , "room"  : "HCK 132"
 }
@@ -90,7 +90,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-01-30 10:30"
 , "end"   : "2017-01-30 11:20"
-, "topic" : "11 Assertions and Exceptions"
+, "topic" : "11 Equals and Hashcode"
 , "url"   : "Lecture11/"
 , "room"  : "HCK 132"
 }
@@ -98,7 +98,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-02-01 10:30"
 , "end"   : "2017-02-01 11:20"
-, "topic" : "12 Subtyping"
+, "topic" : "12 Assertions and Exceptions"
 , "url"   : "Lecture12/"
 , "room"  : "HCK 132"
 }
@@ -106,7 +106,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-02-03 10:30"
 , "end"   : "2017-02-03 11:20"
-, "topic" : "13 Generics 1"
+, "topic" : "13 Subtyping"
 , "url"   : "Lecture13/"
 , "room"  : "HCK 132"
 }
@@ -114,7 +114,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-02-06 10:30"
 , "end"   : "2017-02-06 11:20"
-, "topic" : "14 Generics 2"
+, "topic" : "14 Generics 1"
 , "url"   : "Lecture14/"
 , "room"  : "HCK 132"
 }
@@ -122,7 +122,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-02-08 10:30"
 , "end"   : "2017-02-08 11:20"
-, "topic" : "15 Debugging"
+, "topic" : "15 Generics 2"
 , "url"   : "Lecture15/"
 , "room"  : "HCK 132"
 }
@@ -138,7 +138,7 @@
 { "catg"  : "Lecture"
 , "start" : "2017-02-13 10:30"
 , "end"   : "2017-02-13 11:20"
-, "topic" : "16 Checker Framework"
+, "topic" : "16 Debugging"
 , "url"   : "Lecture16/"
 , "room"  : "HCK 132"
 }
