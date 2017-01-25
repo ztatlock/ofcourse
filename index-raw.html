@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSE 331 Winter 2017</title>
+  <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+  <h1>CSE 331: Software Design and Implementation</h1>
+  <div id='nav'>
+    <ul>
+      <li><a href='https://piazza.com/washington/winter2017/cse331/home'>Piazza</a></li>
+      <!--
+      <li><a href='cal/calendar.html'>Calendar</a></li>
+      -->
+      <li><a href='#lec'>Lectures</a></li>
+      <li><a href='#sec'>Sections</a></li>
+      <li><a href='#reading'>Reading</a></li>
+      <li><a href='#hw'>Homework</a></li>
+      <li><a href='#exam'>Exams</a></li>
+      <li><a href='#ref'>References</a></li>
+    </ul>
+  </div>
+  <hr>
+  <div class='section' id='over-div'>
+    <h2><a id='over'></a>Overview</h2>
+    <p>
+
+    What qualities make a program good?  How can we tell if a program is
+    good?  How can we build good programs?  We will consider these
+    questions as we explore concepts and techniques for the design and
+    construction of reliable and maintainable software systems in modern
+    high-level languages; program structure and design; program-correctness
+    approaches, including testing; and event-driven programming. To
+    practice the concepts from lecture, we will build substantial projects.
+
+    </p>
+    <table><tr>
+      <td class='it'>Lecture</td>
+      <td>Mon, Wed, Fri 10:30
+        <a href='http://www.css.washington.edu/room/HCK+132'>HCK 132</a>
+      </td>
+    </tr><tr>
+      <td class='pad-top it'>Section</td>
+      <td>AA : Thu 8:30
+        <a href='http://www.css.washington.edu/room/MGH+251'>MGH 251</a>
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>AB : Thu 9:30
+        <a href='http://www.css.washington.edu/room/SAV+131'>SAV 131</a>
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>AC : Thu 10:30
+        <a href='http://www.css.washington.edu/room/CHL+015'>CHL 015</a>
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>AD : Thu 11:30
+        <a href='http://www.css.washington.edu/room/MGH+287'>MGH 287</a>
+      </td>
+    </tr><tr>
+      <td class='pad-top it'>Instructor</td>
+      <td class='pad-top'>
+        <a href='http://homes.cs.washington.edu/~ztatlock/'>Zach Tatlock</a>
+        (ztatlock@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Wed 11:30
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 546
+      </td>
+    </tr><tr>
+      <td class='pad-top it'>TAs</td>
+      <td class='pad-top'>
+        Christopher Chen (chrisc94@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Thu 2:30
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
+      </td>
+    </tr><tr>
+      <td class='pad-top it'></td>
+      <td class='pad-top'>
+        Viktor Farkas (vfarkas@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Mon 11:30
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
+      </td>
+    </tr><tr>
+      <td class='pad-top it'></td>
+      <td class='pad-top'>
+        Cody Kesting (kesting@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Wed 5:30
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 021
+      </td>
+    </tr><tr>
+      <td class='pad-top it'></td>
+      <td class='pad-top'>
+        Chen (Jason) Qiu (chenq9@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Tue 4:00
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 021
+      </td>
+    </tr><tr>
+      <td class='pad-top it'></td>
+      <td class='pad-top'>
+        Matthew Yang (mattyang@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Fri 4:00
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
+      </td>
+    </tr><tr>
+      <td class='pad-top it'></td>
+      <td class='pad-top'>
+        Lucy Zhu (lucyzhu@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Tue 10:30
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 021
+      </td>
+    </tr><tr>
+      <td class='pad-top it'></td>
+      <td class='pad-top'>
+        Garrett Marconet (gmarco@cs)
+      </td>
+    </tr><tr>
+      <td></td>
+      <td>Mon 3:30
+        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
+      </td>
+    </tr><tr>
+      <td class='pad-top it'>Resources</td>
+      <td class='pad-top'><div class='resources'>
+        <ul><li>
+          <a href='https://piazza.com/washington/winter2017/cse331/home'>
+            Piazza</a>
+        </li><li>
+          <a href='#syllabus'>
+            Syllabus</a>
+        </li><li>
+          <a href='#integrity'>
+            Academic Integrity</a>
+        </li></ul>
+      </div></td>
+    </tr><tr>
+      <td></td>
+      <td><div class='resources'>
+          <!--
+        <ul><li>
+          <a href='cal/calendar.html'>
+            Calendar</a>
+        </li><li>
+          -->
+        <ul><li>
+          <a href='https://catalyst.uw.edu/collectit/dropbox/ztatlock/39539'>
+            Dropbox</a>
+        </li><li>
+          <a href='https://catalyst.uw.edu/gradebook/ztatlock/100310'>
+            Gradebook</a>
+        </li></ul>
+      </div></td>
+    </tr></table>
+  </div>
+  <div class='section' id='lec-div'>
+    <h2><a id='lec'></a>Lectures</h2>
+    <p>
+      Jan 4, 0. Introduction (<a href='lec00/materials.html'>materials</a>)
+    </p><p>
+      Jan 6, 1. Formal Reasoning (<a href='lec01/materials.html'>materials</a>)
+    </p><p>
+      Jan 9, 2. Reasoning About Loops (<a href='lec02/materials.html'>materials</a>)
+    </p><p>
+      Jan 11, 3. Specifications (<a href='lec03/materials.html'>materials</a>)
+    <!--
+    </p><p>
+      Jan 13, 4. Abstract Data Types (<a href='lec04/materials.html'>materials</a>)
+    </p><p>
+      Jan 18, 4. Representation Invariants (<a href='lec05/materials.html'>materials</a>)
+    </p><p>
+      Jan 20, 6. Abstraction Functions (<a href='lec06/materials.html'>materials</a>)
+    </p><p>
+      Jan 23, 7. Testing (<a href='lec07/materials.html'>materials</a>)
+    </p><p>
+      Jan 25, 8. Style and Design (<a href='lec08/materials.html'>materials</a>)
+    </p><p>
+      Jan 27, 9. Equals and Hashcode (<a href='lec09/materials.html'>materials</a>)
+    </p><p>
+      Jan 30, 10. Assertions and Exceptions (<a href='lec10/materials.html'>materials</a>)
+    </p><p>
+      Feb 1, 11. Subtyping (<a href='lec11/materials.html'>materials</a>)
+    </p><p>
+      Feb 3, 12. Generics 1 (<a href='lec12/materials.html'>materials</a>)
+    </p><p>
+      Feb 6, 13. Generics 2 (<a href='lec13/materials.html'>materials</a>)
+    </p><p>
+      Feb 8, 14. Debugging (<a href='lec14/materials.html'>materials</a>)
+    </p><p>
+      Feb 13, 15. Checker Framework (<a href='lec15/materials.html'>materials</a>)
+    </p><p>
+      Feb 15, 16. Events, Listeners, Callbacks (<a href='lec16/materials.html'>materials</a>)
+    </p><p>
+      Feb 17, 17. Java Graphics and GUIs (<a href='lec17/materials.html'>materials</a>)
+    </p><p>
+      Feb 20, 18. Java GUI Events (<a href='lec18/materials.html'>materials</a>)
+    </p><p>
+      Feb 22, 19. Design Patterns 1 (<a href='lec19/materials.html'>materials</a>)
+    </p><p>
+      Feb 24, 20. Design Patterns 2 (<a href='lec20/materials.html'>materials</a>)
+    </p><p>
+      Feb 27, 21. System Development (<a href='lec21/materials.html'>materials</a>)
+    </p>
+      Mar 1, 22. Verifying System Architectures (<a href='lec22/materials.html'>materials</a>)
+    </p>
+      Mar 3, 23. Wrap Up (<a href='lec23/materials.html'>materials</a>)
+    -->
+    </p>
+  </div>
+  <div class='section' id='sec-div'>
+    <h2><a id='sec'></a>Sections</h2>
+    <p>
+      Jan 7, 1. Hoare Logic and Git (<a href='sec01/materials.html'>materials</a>)
+    <!--
+    </p><p>
+      Jan 14, 2. Project Setup and More Git (<a href='S02/materials.html'>materials</a>)
+    </p><p>
+      Jan 21, 3. ADTs and HW4 (<a href='S03/materials.html'>materials</a>)
+    </p><p>
+      Jan 28, 4. Graphs and Testing (<a href='S04/materials.html'>materials</a>)
+    </p><p>
+      Feb 3, 5. Interfaces and HW6 (<a href='S05/materials.html'>materials</a>)
+    </p><p>
+      Feb 11, 6. Midterm Review (<a href='S06/materials.html'>materials</a>)
+    </p><p>
+      Feb 18, 7. Dijkstra's Algorithm (<a href='S07/materials.html'>materials</a>)
+    </p><p>
+      Feb 25, 8. Model View Controller (<a href='S08/materials.html'>materials</a>)
+    </p><p>
+      Mar 3, 9. Design Patterns (<a href='S09/materials.html'>materials</a>)
+    </p><p>
+      Mar 10, 10. Final Review (<a href='S10/materials.html'>materials</a>)
+    -->
+     </p>
+  </div>
+  <div class='section' id='reading-div'>
+    <h2><a id='reading'></a>Reading</h2>
+    <p>
+
+      We will be reading selections from
+      <a href='https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X'>The Pragmatic Programmer</a>
+      and
+      <a href='https://www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683'>Effective Java</a>
+      throughout the quarter. You can find quizzes on
+      the reading in Catalyst.
+
+    </p><p>
+      Week 1 : Get books!
+    </p><p>
+      Week 2 : PP Chapter 1 (quiz due Jan 14)
+    <!--
+    </p><p class='ind'>
+      PP sections:
+    </p><ul><li>
+        Preface
+      </li><li>
+        1 The Cat Ate My Source Code
+      </li><li>
+        2 Software Entropy
+      </li><li>
+        5 Your Knowledge Portfolio
+      </li><li>
+        31 Programming by Coincidence
+      </li><li>
+        35 Evil Wizards
+    </li></ul><p>
+      Week 3 : quiz due: 2/3
+    </p><p class='ind'>
+      PP sections:
+    </p><ul><li>
+        21 Design by Contract
+      </li><li>
+        44 It's All Writing
+    </li></ul><p class='ind'>
+      EJ items:
+    </p><ul class='ejul'><li>
+        15
+      </li><li>
+        39
+      </li><li>
+        44
+    </li></ul><p>
+      Week 4 : quiz due 2/10
+    </p><p class='ind'>
+      PP sections:
+    </p><ul><li>
+        4 Good-Enough Software
+      </li><li>
+        6 Communicate!
+      </li><li>
+        7 The Evils of Duplication
+      </li><li>
+        8 Orthogonality
+      </li><li>
+        26 Decoupling and the Law of Demeter
+      </li><li>
+        33 Refactoring
+      </li><li>
+        34 Code That's Easy to Test
+      </li><li>
+        43 Ruthless Testing
+    </li></ul><p>
+      Week 5 : quiz due 2/10
+    </p><p class='ind'>
+      EJ items:
+    </p><ul class='ejul'><li>
+        10
+      </li><li>
+        13
+      </li><li>
+        14
+      </li><li>
+        15
+      </li><li>
+        40
+      </li><li>
+        41
+      </li><li>
+        45
+      </li><li>
+        56
+    </li></ul><p>
+      Week 6 : quiz due 2/17
+    </p><p class='ind'>
+      PP sections
+    </p><ul><li>
+        22 Dead Programs Tell No Lies
+      </li><li>
+        23 Assertive Programming
+      </li><li>
+        24 When to Use Exceptions
+    </li></ul><p class='ind'>
+      EJ items:
+    </p><ul class='ejul'><li>
+        8
+      </li><li>
+        9
+      </li><li>
+        11
+      </li><li>
+        12
+    </li></ul><p>
+      Week 7 : quiz due 2/24
+    </p><p class='ind'>
+      EJ items:
+    </p><ul class='ejul'><li>
+        16 - 20
+      </li><li>
+        36
+      </li><li>
+        38
+      </li><li>
+        52
+      </li><li>
+        57 - 62
+      </li><li>
+        65
+    </li></ul><p>
+      Week 8 : quiz due 3/2
+    </p><p class='ind'>
+      PP sections:
+    </p><ul><li>
+        27 Metaprogramming
+      </li><li>
+        29 It's Just a View
+    </li></ul><p class='ind'>
+      EJ items:
+    </p><ul class='ejul'><li>
+        23 - 28
+    </li></ul><p>
+      Week 9 : quiz due 3/9
+    </p><p class='ind'>
+      PP sections:
+    </p><ul><li>
+         18 Debugging
+    </li></ul><p class='ind'>
+      EJ items:
+    </p><ul class='ejul'><li>
+        1 - 6
+    </li></ul>
+  -->
+    </p>
+  </div>
+  <div class='section' id='hw-div'>
+    <h2><a id='hw'></a>Homework</h2>
+    <p>
+
+      Submit homeworks 0, 1, and 2 via the
+      <a href='https://catalyst.uw.edu/collectit/dropbox/ztatlock/39539'>
+        331 Dropbox</a>.
+      Submit programming assignments by pushing and tagging
+      your git repo as described in the assignment spec.
+      If you need to,
+      you can use up to 4 late days during the quarter,
+      but at most 2 per assignment.
+
+    </p><p>
+
+      To get ready for future homeworks, please see the
+      <a href='#ref'>References</a>
+
+    </p><p>
+      <a href='hw00/hw00.pdf'>Homework 0</a> :
+      due Mon, Jan 9 at 10am
+    </p><p>
+      <a href='hw01/hw01.pdf'>Homework 1</a> :
+      due Fri, Jan 13 at 11pm
+    </p><p>
+      <a href='hw02/hw02.pdf'>Homework 2</a> :
+      due Wed, Jan 18 at 10am
+    <!--
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw3/hw3.html'>
+        Homework 3</a> :
+      due Thursday, Jan 21 at 11pm
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw4/hw4.html'>
+        Homework 4</a> :
+      due Thursday, Jan 28 at 11pm
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw5/hw5.html'>
+        Homework 5</a> :
+      due Monday, Feb 8 at 11pm
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw6/hw6.html'>
+        Homework 6</a> :
+      due Thursday, Feb 18 at 11pm
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw7/hw7.html'>
+        Homework 7</a> :
+      due Friday, Feb 26 at 11pm
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw8/hw8.html'>
+        Homework 8</a> :
+      due Friday, Mar 4 at 11pm
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw9/hw9.html'>
+        Homework 9</a> :
+      due Friday, Mar 11 at 11pm
+    -->
+    </p>
+  </div>
+  <div class='section' id='exam-div'>
+    <h2><a id='exam'></a>Exams</h2>
+    <p>
+      Midterm : Feb 10, in class
+      <!--
+      (<a href='midterm.pdf'>midterm</a>
+       <a href='midterm-soln.pdf'>soln</a>)
+      -->
+    </p>
+    <p>
+      Final : (TBD, probably morning first day of finals week)
+    </p>
+
+<p>
+  Previous midterms:
+</p>
+<p>
+
+  <a href="old-exams/cse331-15au-midterm.pdf">15au</a> &nbsp; (<a
+     href="old-exams/cse331-15au-midterm-sol.pdf">solution</a>) <a
+     href="old-exams/15sp-midtermUnsolved.pdf">15sp</a> (<a
+     href="old-exams/15sp-midtermSolved.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-15wi-midterm.pdf">15wi</a> (<a
+     href="old-exams/cse331-15wi-midtermsol.pdf">solution</a>) &nbsp;<a
+     href="old-exams/14au-midtermUnsolved.pdf">14au</a> (<a
+     href="old-exams/14au-midtermSolved.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-sp14-midterm.pdf">14sp</a> (<a
+     href="old-exams/cse331-sp14-midterm-sol.pdf">solution</a>) &nbsp;<a
+     href="old-exams/14wi-midtermUnsolved.pdf">14wi</a> (<a
+     href="old-exams/14wi-midtermSolved.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-au13-midterm.pdf">13au</a> (<a
+     href="old-exams/cse331-au13-midterm-sol.pdf">solution</a>) <a
+     href="old-exams/13sp-exam1.pdf">13sp</a> (<a
+     href="old-exams/13sp-exam1-solutions.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-wi13-midterm.pdf">13wi</a> &nbsp;(<a
+     href="old-exams/cse331-wi13-midtermsol.pdf">solution</a>)&nbsp; <a
+     href="old-exams/12au-midterm.pdf">12au</a> (<a
+     href="old-exams/12au-midterm-sol.pdf">solution</a>) &nbsp;<a
+     href="old-exams/12sp-exam1.pdf">12sp</a> (<a
+     href="old-exams/12sp-exam1-solutions.pdf">solution</a>) &nbsp; <a
+     href="old-exams/12wi-exam1.pdf">12wi</a> (<a
+     href="old-exams/12wi-exam1-solutions.pdf">solution</a>)
+</p>
+
+<p>
+  Previous finals:
+</p>
+<p>
+
+  <a href="old-exams/cse331-15au-final.pdf">15au</a> &nbsp; (<a
+     href="old-exams/cse331-15au-final-sol.pdf">solution</a>) <a
+     href="old-exams/15sp-finalUnsolved.pdf">15sp</a> (<a
+     href="old-exams/15sp-finalSolved.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-15wi-final.pdf">15wi</a> (<a
+     href="old-exams/cse331-15wi-finalsol.pdf">solution</a>) <a
+     href="old-exams/14au-finalUnsolved.pdf">14au</a> (<a
+     href="old-exams/14au-finalSolved.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-14sp-final.pdf">14sp</a> (<a
+     href="old-exams/cse331-14sp-final-sol.pdf"> solution</a>)&nbsp; <a
+     href="old-exams/14wi-finalUnsolved.pdf">14wi</a> (<a
+     href="old-exams/14wi-finalSolved.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-au13-final.pdf">13au</a> (<a
+     href="old-exams/cse331-au13-final-sol.pdf">solution</a>) &nbsp;<a
+     href="old-exams/13sp-exam2.pdf">13sp</a> (<a
+     href="old-exams/13sp-exam2-solutions.pdf">solution</a>) &nbsp;<a
+     href="old-exams/cse331-wi13-final.pdf">13wi</a> &nbsp;(<a
+     href="old-exams/cse331-wi13-final-sol.pdf">solution</a>)&nbsp; <a
+     href="old-exams/12au-final.pdf">12au</a> (<a
+     href="old-exams/12au-final-sol.pdf">solution</a>) &nbsp;<a
+     href="old-exams/12sp-exam2.pdf">12sp</a> (<a
+     href="old-exams/12sp-exam2-solutions.pdf">solution</a>)&nbsp; <a
+     href="old-exams/12wi-exam2.pdf">12wi</a> (<a
+     href="old-exams/12wi-exam2-solutions.pdf">solution</a>)
+
+</p>
+
+  </div>
+  <div class='section' id='ref-div'>
+    <h2><a id='ref'></a>References</h2>
+    <p>
+      <b>Tools</b>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/tools/basicSetup.html'>
+        Basic Environment Setup</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/tools/versioncontrol.html'>
+        Version Control</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/tools/turnin.html'>
+        Assignment Submission</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/tools/WorkingAtHome.html'>
+        Working at home</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/tools/editing-compiling.html'>
+        Editing, Compiling, Running and Testing Java Programs</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/tools/eclipse_reference.html'>
+        Eclipse Reference</a>
+    </p><p>
+      <b>Concepts</b>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/concepts/JavaStyleGuide.html'>
+        Java Style Guide</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/concepts/specifications.html'>
+        Class and Method Specifications</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/concepts/abstraction-functions-and-rep-invariants.html'>
+        Rep Invariants and Abstraction Functions</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/concepts/testing.html'>
+        Testing</a>
+    </p><p>
+      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/concepts/debugging.html'>
+        Debugging</a>
+    </p>
+  </div>
+  <div class='section' id='syllabus-div'>
+    <h2><a id='syllabus'></a>Syllabus</h2>
+<p>
+
+  <strong>Goals:</strong> There is a level of programming maturity beyond
+  introductory programming that comes from building larger systems and
+  understanding how to specify them precisely, manage their complexity,
+  and verify that they work as expected.  After completing this course
+  successfully students should be able to:
+
+</p><ul><li>
+
+    Successfully build medium-scale software projects in principled ways
+
+  </li><li>
+
+    Understand the role of specifications and abstractions and how to
+    verify that an implementation is correct, including effective testing
+    and verification strategies and use of formal reasoning
+
+  </li><li>
+
+    Analyze a software development problem and be able to design
+    effective program structures to solve it, including appropriate
+    modularity, separation of abstraction and implementation concerns,
+    use of standard design patterns to solve recurring design problems,
+    and use of standard libraries
+
+  </li><li>
+
+    Use modern programming languages effectively, including understanding
+    type systems, objects and classes, modularity, notions of  identity
+    and equality, and  proper use of exceptions and assertions
+
+  </li><li>
+
+    Use and learn new contemporary software tools, including integrated
+    development environments, test frameworks, debuggers, version
+    control, and documentation processing tools
+
+</li></ul><p>
+
+  To gain experience we will use Java and associated tools like Eclipse,
+  JUnit, JavaDoc, and git, but the goal is to understand the underlying
+  ideas and concepts that are widely applicable to software construction.
+
+</p><p>
+
+  <strong>Prerequisite:</strong> The only formal prerequisite is CSE 143.
+  We will very much rely on a thorough understanding of the concepts from
+  CSE 143 as well as Java programming skills. We will go much further and
+  you will be challenged to approach software development much differently
+  than you have in CSE 143 or other courses.
+
+</p><p>
+
+  <strong>Grading and Exams:</strong> Your overall grade will be determined
+  as follows (subject to change as necessary, but substantial changes to
+  the numbers below is unlikely):
+
+</p><ul>
+
+  <li>55% - Homework assignments, approximately weekly</li>
+  <li>17% - Midterm exam</li>
+  <li>23% - Final exam</li>
+  <li>5% - Reading quizzes and other participation</li>
+
+</ul><p>
+
+  There is approximately one assignment per week, but not on an exact
+  schedule (i.e., assignments may be due on different days).  The
+  assignments are <em><strong>not</strong></em> weighted equally because
+  they are of different length and sophistication. The exact weighting is
+  to-be-determined and is not likely to be published in advance (we need to
+  see how the course goes). Later assignments are likely to be weighted
+  more heavily because they are more involved.
+
+</p><p>
+
+  <strong>Late Policy:</strong> Deadlines will be given with each
+  assignment.  These deadlines are strict. For the entire quarter, you may
+  have <strong>four &quot;late days&quot;</strong>. You are strongly advised
+  to save them for emergencies. You may not use more than two for the same
+  assignment.  They must be used in 24-hour (integer) chunks.  This policy
+  may not be the same as in your other classes. You are responsible for
+  understanding it if you choose to submit late work.
+
+</p><p>
+
+  <strong>Academic Integrity:</strong> Any attempt to misrepresent the work
+  you submit will be dealt with via the appropriate University mechanisms,
+  and your instructor will make every attempt to ensure the harshest
+  allowable penalty.  The guidelines for this course and more information
+  about academic integrity are <a href="#integrity">below</a>. You are
+  responsible for knowing that information.
+
+</p><p>
+
+  <strong>Texts: </strong>There are two required books for the course:
+
+</p><ul>
+
+    <li><em>The Pragmatic Programmer</em> by Andrew Hunt and David Thomas, Addison-Wesley, 1999.</li>
+    <li><em>Effective Java</em> by Joshua Bloch, 2nd ed., Addison-Wesley, 2008.</li>
+
+</ul><p>
+
+  These books contain a great deal of distilled wisdom about software
+  construction in general and Java best practices, technical details, and
+  style issues.  Reading about software development is an important skill.
+
+</p><p>
+
+  There will be assigned readings from these books during the quarter, and
+  you will be required to complete short online quizzes from time to time
+  about the readings.
+
+</p><p>
+
+  <strong>Advice: </strong>
+
+</p><ul><li>
+
+    Do not skip class or section to work on homework, not even late in the
+    quarter when you are more tired and busy. This will cost you time (not
+    to mention learning) in the long run. Class will start promptly, and
+    you will find the entire course easier and more educational if you
+    arrive punctually, well-rested, and ready to pay attention for 50
+    minutes.
+
+  </li><li>
+
+    Do buy a Java programming book. In general, a large, well-written
+    reference book for any programming language you are using is a great
+    value, sure to save you time over frustrating web-searching and time on
+    sites like stackoverflow.com (though those are useful too -- it is not
+    "one or the other"). Web-searching is cheaper, but you are spending a
+    lot of money on your education and will likely get a high-paying job
+    when you finish. The cost of a book that <em>helps you do better</em>
+    in classes, internships, etc. is <em>miniscule</em> compared to the
+    benefits you get from doing better work in less time. And such a book
+    will be valuable long after you complete CSE331.
+
+  </li><li>
+
+    A common misconception about this course is that the lectures,
+    readings, and homeworks are disconnected. They are different since
+    there is no point repeating something in multiple ways, but they also
+    are connected. If you are approaching a homework and not using the
+    concepts in the rest of the course materials, <em>you are making it
+    harder</em>. When you are sawing something with a dull blade, it can
+  seem like you do not have time to sharpen the blade because you need to
+  finish sawing. In fact, you likely do not have time not to stop and
+  sharpen the blade.
+
+  </li><li>
+
+    Start homeworks early. They are more difficult than assignments in
+    earlier courses and you need time to make mistakes.
+
+  </li><li>
+
+    Enjoy this course and learn a lot. It is invaluable for making you a
+    better software developer. The more you master these ideas now, the
+    more effective you can be in jobs, other courses, and any other
+    projects.
+
+</li></ul><p>
+
+  <strong>Approximate Topics (subject to change):</strong> We expect to
+  cover the following, with an emphasis on specification and design. The
+  order these are listed is only very rough as we will revisit some topics
+  iteratively.
+
+</p><ul>
+
+  <li>Reasoning about programs: pre- and post-conditions, invariants, and correctness</li>
+  <li>Abstract data types, specification, implementation, abstraction functions,  representation invariants, notions of equality</li>
+  <li>Java language issues: subclasses and subtypes, generics, exceptions, assertions, etc.</li>
+  <li>Tools: Eclipse IDE,  version control, git</li>
+  <li>Code quality, style, comments, documentation, JavaDoc</li>
+  <li>Testing, test coverage, black- and white-box testing, test-first development, regression testing, JUnit</li>
+  <li>Debugging strategies and tools</li>
+  <li>Design: modular design, coupling, cohesion; design patterns</li>
+  <li>User interfaces, callbacks, separation of model from view/control</li>
+
+</ul>
+
+  </div>
+  <div class='section' id='integrity-div'>
+    <h2><a id='integrity'></a>Academic Integrity</h2>
+
+<p>
+
+  <strong>You are responsible for understanding every word in this document.</strong>
+
+</p><ul>
+
+  <li><strong>Motivation:</strong>    A course in which students do not accurately present what they know and the
+    work they have done is worse than having no course at all. Your instructor
+    and your fellow students expect
+    and deserve a basic respect for the integrity of this course and an environment
+    where we can all focus on learning. Therefore, this document establishes
+    a clear understanding of what we all will do with
+    the expectation that it will never be an issue.<br>
+    <br>
+  </li>
+
+  <li> <strong>Bottom Line:</strong> If you are
+    ever unclear about how to represent what work you have done, (a) ask and
+    (b) describe clearly what you have done. If you do, the worst
+    that will happen is you will lose some
+    credit on an assignment. This is much better than the alternative.
+    <br>
+    <br>
+    If you are at all in doubt about whether your collaboration was appropriate,
+    include a description of your collaboration with your homework submission.
+    <br>
+    <br>
+    If the course staff receives homework submissions that are too similar to
+    have been created independently, or are derived from
+    other  sources, we will pursue the maximum penalty allowed by
+    the
+    University.<br>
+    <br>
+  </li>
+
+  <li> <strong>Collaboration:</strong> You are encouraged to discuss the material in
+    this course, including homework problems.
+    We all learn better when we trade ideas with others, including course staff
+    and fellow students.
+    But you must produce your own homework
+    solutions and you must not look at other students'
+    solutions or other information that takes away the intellectual challenge
+    of the homework.
+    <br>
+    <br>
+    Unless specifically told otherwise, you are to complete
+    assignments individually. You may discuss
+    assignments in general terms with other students including a discussion of
+    how to approach a problem, but the code and other work you submit must be your own.
+   The intent is to allow you to get some help when you
+    are stuck, but this help should be limited and should never involve details
+    of how to write a solution. You may not have another person (current student,
+    former
+    student, tutor, friend, anyone) &quot;walk you
+    through&quot; how to solve an assignment.  <br>
+    <br>
+    Copying someone else's homework or receiving unfair help
+    completing your assignment is cheating (see below), as is copying the
+    homework from another source (the web, other classes, previous course
+    offerings, etc.).
+    <br>
+    <br>
+  </li>
+
+  <li>
+    <strong>Cheating:</strong> Cheating is a very serious offense. If
+    you are caught cheating, you can expect a failing grade and initiation
+    of a cheating case in the University system. Cheating is an insult to
+    your colleagues, to the instructors, to the department and major
+    program, and most importantly, to you. If you feel that you are having
+    a problem with the material, or do not have time to finish an
+    assignment, or have any number of other reasons to cheat, then talk
+    with the instructor. Copying others' work is not the solution.
+    <br><br>
+    To avoid creating situations where copying can arise, never e-mail
+    or post your solution files. When using the class discussion board, do
+    not post code that is an attempt to solve a homework problem. If in
+    doubt about what might constitute cheating, send the instructor email
+    describing the situation.<br><br>
+  </li>
+
+  <li><strong>Fine Print:</strong> It's not effective for us to try to define a list of all impermissible activities.
+  That approach can tempt people to look for loopholes.
+  Consider: &quot;the code you write must be your own.&quot;
+  This includes things like not using any substantive material or solutions from
+  similar assignments this term or previous terms at UW or elsewhere,
+  including anywhere on the Internet, transcribing solutions from any
+  other source, etc.  Our policy is intended to convey the spirit of
+  the law, fully understanding that the letter of the law may not
+  cover everything that someone may think of.  <br>
+    <br>
+  </li>
+
+  <li>For additional information and a more detailed discussion, please refer
+    to the <a href="http://www.cs.washington.edu/education/AcademicMisconduct/">CSE
+    Academic Misconduct Policy</a> page.</li>
+</ul>
+
+  </div>
+  <div class='section' id='credits-div'>
+    <h2><a id='credits'></a>Credits</h2>
+    <p>Material in this course based on work from
+       Michael Ernst, Hal Perkins, Dan Grossman,
+       David Notkin, numerous TAs, and past 331 students.</p>
+  </div>
+</body>
+</html>
