@@ -1,542 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>
+    <!-- FROM CONFIG -->
+  </title>
   <meta charset="UTF-8">
   <link rel='stylesheet' type='text/css' href='css/style.css'>
+  <script src="lib/jquery.min.js"></script>
 </head>
 <body>
-  <h1></h1>
+  <h1 id='title'>
+    <!-- FROM CONFIG -->
+  </h1>
   <div id='nav'>
-    <ul>
-      <li id='piazza'></li>
-      <li><a href='calendar.html'>Calendar</a></li>
-      <li><a href='#lec'>Lectures</a></li>
-      <li><a href='#sec'>Sections</a></li>
-      <li><a href='#reading'>Reading</a></li>
-      <li><a href='#hw'>Homework</a></li>
-      <li><a href='#exam'>Exams</a></li>
-      <li><a href='#ref'>References</a></li>
+    <ul id='nav-ul'>
+      <!-- FROM CONFIG -->
     </ul>
   </div>
   <hr>
-  <div class='section' id='over-div'>
-    <h2><a id='over'></a>Overview</h2>
+  <div class='section' id='Overview'>
+    <h2><a name='Overview'></a>Overview</h2>
     <p>
 
-    What qualities make a program good?  How can we tell if a program is
-    good?  How can we build good programs?  We will consider these
-    questions as we explore concepts and techniques for the design and
-    construction of reliable and maintainable software systems in modern
-    high-level languages; program structure and design; program-correctness
-    approaches, including testing; and event-driven programming. To
-    practice the concepts from lecture, we will build substantial projects.
+    TODO
 
     </p>
-    <table><tr>
-      <td class='it'>Lecture</td>
-      <td>Mon, Wed, Fri 10:30
-        <a href='http://www.css.washington.edu/room/HCK+132'>HCK 132</a>
-      </td>
-    </tr><tr>
-      <td class='pad-top it'>Section</td>
-      <td>AA : Thu 8:30
-        <a href='http://www.css.washington.edu/room/MGH+251'>MGH 251</a>
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>AB : Thu 9:30
-        <a href='http://www.css.washington.edu/room/SAV+131'>SAV 131</a>
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>AC : Thu 10:30
-        <a href='http://www.css.washington.edu/room/CHL+015'>CHL 015</a>
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>AD : Thu 11:30
-        <a href='http://www.css.washington.edu/room/MGH+287'>MGH 287</a>
-      </td>
-    </tr><tr>
-      <td class='pad-top it'>Instructor</td>
-      <td class='pad-top'>
-        <a href='http://homes.cs.washington.edu/~ztatlock/'>Zach Tatlock</a>
-        (ztatlock@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Wed 11:30
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 546
-      </td>
-    </tr><tr>
-      <td class='pad-top it'>TAs</td>
-      <td class='pad-top'>
-        Christopher Chen (chrisc94@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Thu 2:30
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
-      </td>
-    </tr><tr>
-      <td class='pad-top it'></td>
-      <td class='pad-top'>
-        Viktor Farkas (vfarkas@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Mon 11:30
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
-      </td>
-    </tr><tr>
-      <td class='pad-top it'></td>
-      <td class='pad-top'>
-        Cody Kesting (kesting@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Wed 5:30
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 021
-      </td>
-    </tr><tr>
-      <td class='pad-top it'></td>
-      <td class='pad-top'>
-        Chen (Jason) Qiu (chenq9@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Tue 4:00
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 021
-      </td>
-    </tr><tr>
-      <td class='pad-top it'></td>
-      <td class='pad-top'>
-        Matthew Yang (mattyang@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Fri 4:00
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
-      </td>
-    </tr><tr>
-      <td class='pad-top it'></td>
-      <td class='pad-top'>
-        Lucy Zhu (lucyzhu@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Tue 10:30
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 021
-      </td>
-    </tr><tr>
-      <td class='pad-top it'></td>
-      <td class='pad-top'>
-        Garrett Marconet (gmarco@cs)
-      </td>
-    </tr><tr>
-      <td></td>
-      <td>Mon 3:30
-        <a href='http://www.washington.edu/maps/#!/cse'>CSE</a> 006
-      </td>
-    </tr><tr>
-      <td class='pad-top it'>Resources</td>
-      <td class='pad-top'><div class='resources'>
-        <ul><li>
-          <a href='https://piazza.com/washington/winter2017/cse331/home'>
-            Piazza</a>
-        </li><li>
-          <a href='#syllabus'>
-            Syllabus</a>
-        </li><li>
-          <a href='#integrity'>
-            Academic Integrity</a>
-        </li></ul>
-      </div></td>
-    </tr><tr>
-      <td></td>
-      <td><div class='resources'>
-          <!--
-        <ul><li>
-          <a href='cal/calendar.html'>
-            Calendar</a>
-        </li><li>
-          -->
-        <ul><li>
-          <a href='https://catalyst.uw.edu/collectit/dropbox/ztatlock/39539'>
-            Dropbox</a>
-        </li><li>
-          <a href='https://catalyst.uw.edu/gradebook/ztatlock/100310'>
-            Gradebook</a>
-        </li></ul>
-      </div></td>
-    </tr></table>
+    <table id='over-table'>
+      <!-- FROM CONFIG -->
+    </table>
   </div>
-  <div class='section' id='lec-div'>
-    <h2><a id='lec'></a>Lectures</h2>
+
+<!-- ********** -->
+
+  <div class='section' id='Lecture'>
+    <h2><a id='Lecture'></a>Lecture</h2>
     <p>
-      Jan 4, 0. Introduction (<a href='lec00/materials.html'>materials</a>)
-    </p><p>
-      Jan 6, 1. Formal Reasoning (<a href='lec01/materials.html'>materials</a>)
-    </p><p>
-      Jan 9, 2. Reasoning About Loops (<a href='lec02/materials.html'>materials</a>)
-    </p><p>
-      Jan 11, 3. Specifications (<a href='lec03/materials.html'>materials</a>)
-    <!--
-    </p><p>
-      Jan 13, 4. Abstract Data Types (<a href='lec04/materials.html'>materials</a>)
-    </p><p>
-      Jan 18, 4. Representation Invariants (<a href='lec05/materials.html'>materials</a>)
-    </p><p>
-      Jan 20, 6. Abstraction Functions (<a href='lec06/materials.html'>materials</a>)
-    </p><p>
-      Jan 23, 7. Testing (<a href='lec07/materials.html'>materials</a>)
-    </p><p>
-      Jan 25, 8. Style and Design (<a href='lec08/materials.html'>materials</a>)
-    </p><p>
-      Jan 27, 9. Equals and Hashcode (<a href='lec09/materials.html'>materials</a>)
-    </p><p>
-      Jan 30, 10. Assertions and Exceptions (<a href='lec10/materials.html'>materials</a>)
-    </p><p>
-      Feb 1, 11. Subtyping (<a href='lec11/materials.html'>materials</a>)
-    </p><p>
-      Feb 3, 12. Generics 1 (<a href='lec12/materials.html'>materials</a>)
-    </p><p>
-      Feb 6, 13. Generics 2 (<a href='lec13/materials.html'>materials</a>)
-    </p><p>
-      Feb 8, 14. Debugging (<a href='lec14/materials.html'>materials</a>)
-    </p><p>
-      Feb 13, 15. Checker Framework (<a href='lec15/materials.html'>materials</a>)
-    </p><p>
-      Feb 15, 16. Events, Listeners, Callbacks (<a href='lec16/materials.html'>materials</a>)
-    </p><p>
-      Feb 17, 17. Java Graphics and GUIs (<a href='lec17/materials.html'>materials</a>)
-    </p><p>
-      Feb 20, 18. Java GUI Events (<a href='lec18/materials.html'>materials</a>)
-    </p><p>
-      Feb 22, 19. Design Patterns 1 (<a href='lec19/materials.html'>materials</a>)
-    </p><p>
-      Feb 24, 20. Design Patterns 2 (<a href='lec20/materials.html'>materials</a>)
-    </p><p>
-      Feb 27, 21. System Development (<a href='lec21/materials.html'>materials</a>)
+
+    TODO
+
     </p>
-      Mar 1, 22. Verifying System Architectures (<a href='lec22/materials.html'>materials</a>)
-    </p>
-      Mar 3, 23. Wrap Up (<a href='lec23/materials.html'>materials</a>)
-    -->
-    </p>
+    <table id='Lecture-table'>
+      <!-- FROM SCHEDULE -->
+    </table>
   </div>
-  <div class='section' id='sec-div'>
-    <h2><a id='sec'></a>Sections</h2>
-    <p>
-      Jan 7, 1. Hoare Logic and Git (<a href='sec01/materials.html'>materials</a>)
-    <!--
-    </p><p>
-      Jan 14, 2. Project Setup and More Git (<a href='S02/materials.html'>materials</a>)
-    </p><p>
-      Jan 21, 3. ADTs and HW4 (<a href='S03/materials.html'>materials</a>)
-    </p><p>
-      Jan 28, 4. Graphs and Testing (<a href='S04/materials.html'>materials</a>)
-    </p><p>
-      Feb 3, 5. Interfaces and HW6 (<a href='S05/materials.html'>materials</a>)
-    </p><p>
-      Feb 11, 6. Midterm Review (<a href='S06/materials.html'>materials</a>)
-    </p><p>
-      Feb 18, 7. Dijkstra's Algorithm (<a href='S07/materials.html'>materials</a>)
-    </p><p>
-      Feb 25, 8. Model View Controller (<a href='S08/materials.html'>materials</a>)
-    </p><p>
-      Mar 3, 9. Design Patterns (<a href='S09/materials.html'>materials</a>)
-    </p><p>
-      Mar 10, 10. Final Review (<a href='S10/materials.html'>materials</a>)
-    -->
-     </p>
-  </div>
-  <div class='section' id='reading-div'>
-    <h2><a id='reading'></a>Reading</h2>
+  <div class='section' id='Section'>
+    <h2><a id='Section'></a>Section</h2>
     <p>
 
-      We will be reading selections from
-      <a href='https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X'>The Pragmatic Programmer</a>
-      and
-      <a href='https://www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683'>Effective Java</a>
-      throughout the quarter. You can find quizzes on
-      the reading in Catalyst.
+    TODO
 
-    </p><p>
-      Week 1 : Get books!
-    </p><p>
-      Week 2 : PP Chapter 1 (quiz due Jan 14)
-    <!--
-    </p><p class='ind'>
-      PP sections:
-    </p><ul><li>
-        Preface
-      </li><li>
-        1 The Cat Ate My Source Code
-      </li><li>
-        2 Software Entropy
-      </li><li>
-        5 Your Knowledge Portfolio
-      </li><li>
-        31 Programming by Coincidence
-      </li><li>
-        35 Evil Wizards
-    </li></ul><p>
-      Week 3 : quiz due: 2/3
-    </p><p class='ind'>
-      PP sections:
-    </p><ul><li>
-        21 Design by Contract
-      </li><li>
-        44 It's All Writing
-    </li></ul><p class='ind'>
-      EJ items:
-    </p><ul class='ejul'><li>
-        15
-      </li><li>
-        39
-      </li><li>
-        44
-    </li></ul><p>
-      Week 4 : quiz due 2/10
-    </p><p class='ind'>
-      PP sections:
-    </p><ul><li>
-        4 Good-Enough Software
-      </li><li>
-        6 Communicate!
-      </li><li>
-        7 The Evils of Duplication
-      </li><li>
-        8 Orthogonality
-      </li><li>
-        26 Decoupling and the Law of Demeter
-      </li><li>
-        33 Refactoring
-      </li><li>
-        34 Code That's Easy to Test
-      </li><li>
-        43 Ruthless Testing
-    </li></ul><p>
-      Week 5 : quiz due 2/10
-    </p><p class='ind'>
-      EJ items:
-    </p><ul class='ejul'><li>
-        10
-      </li><li>
-        13
-      </li><li>
-        14
-      </li><li>
-        15
-      </li><li>
-        40
-      </li><li>
-        41
-      </li><li>
-        45
-      </li><li>
-        56
-    </li></ul><p>
-      Week 6 : quiz due 2/17
-    </p><p class='ind'>
-      PP sections
-    </p><ul><li>
-        22 Dead Programs Tell No Lies
-      </li><li>
-        23 Assertive Programming
-      </li><li>
-        24 When to Use Exceptions
-    </li></ul><p class='ind'>
-      EJ items:
-    </p><ul class='ejul'><li>
-        8
-      </li><li>
-        9
-      </li><li>
-        11
-      </li><li>
-        12
-    </li></ul><p>
-      Week 7 : quiz due 2/24
-    </p><p class='ind'>
-      EJ items:
-    </p><ul class='ejul'><li>
-        16 - 20
-      </li><li>
-        36
-      </li><li>
-        38
-      </li><li>
-        52
-      </li><li>
-        57 - 62
-      </li><li>
-        65
-    </li></ul><p>
-      Week 8 : quiz due 3/2
-    </p><p class='ind'>
-      PP sections:
-    </p><ul><li>
-        27 Metaprogramming
-      </li><li>
-        29 It's Just a View
-    </li></ul><p class='ind'>
-      EJ items:
-    </p><ul class='ejul'><li>
-        23 - 28
-    </li></ul><p>
-      Week 9 : quiz due 3/9
-    </p><p class='ind'>
-      PP sections:
-    </p><ul><li>
-         18 Debugging
-    </li></ul><p class='ind'>
-      EJ items:
-    </p><ul class='ejul'><li>
-        1 - 6
-    </li></ul>
-  -->
     </p>
+    <table id='Section-table'>
+      <!-- FROM SCHEDULE -->
+    </table>
   </div>
-  <div class='section' id='hw-div'>
-    <h2><a id='hw'></a>Homework</h2>
+  <div class='section' id='Reading'>
+    <h2><a id='Reading'></a>Reading</h2>
     <p>
 
-      Submit homeworks 0, 1, and 2 via the
-      <a href='https://catalyst.uw.edu/collectit/dropbox/ztatlock/39539'>
-        331 Dropbox</a>.
-      Submit programming assignments by pushing and tagging
-      your git repo as described in the assignment spec.
-      If you need to,
-      you can use up to 4 late days during the quarter,
-      but at most 2 per assignment.
+    TODO
 
-    </p><p>
-
-      To get ready for future homeworks, please see the
-      <a href='#ref'>References</a>
-
-    </p><p>
-      <a href='hw00/hw00.pdf'>Homework 0</a> :
-      due Mon, Jan 9 at 10am
-    </p><p>
-      <a href='hw01/hw01.pdf'>Homework 1</a> :
-      due Fri, Jan 13 at 11pm
-    </p><p>
-      <a href='hw02/hw02.pdf'>Homework 2</a> :
-      due Wed, Jan 18 at 10am
-    <!--
-    </p><p>
-      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw3/hw3.html'>
-        Homework 3</a> :
-      due Thursday, Jan 21 at 11pm
-    </p><p>
-      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw4/hw4.html'>
-        Homework 4</a> :
-      due Thursday, Jan 28 at 11pm
-    </p><p>
-      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw5/hw5.html'>
-        Homework 5</a> :
-      due Monday, Feb 8 at 11pm
-    </p><p>
-      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw6/hw6.html'>
-        Homework 6</a> :
-      due Thursday, Feb 18 at 11pm
-    </p><p>
-      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw7/hw7.html'>
-        Homework 7</a> :
-      due Friday, Feb 26 at 11pm
-    </p><p>
-      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw8/hw8.html'>
-        Homework 8</a> :
-      due Friday, Mar 4 at 11pm
-    </p><p>
-      <a href='http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw9/hw9.html'>
-        Homework 9</a> :
-      due Friday, Mar 11 at 11pm
-    -->
     </p>
+    <table id='Reading-table'>
+      <!-- FROM SCHEDULE -->
+    </table>
   </div>
-  <div class='section' id='exam-div'>
-    <h2><a id='exam'></a>Exams</h2>
+  <div class='section' id='Homework'>
+    <h2><a id='Homework'></a>Homework</h2>
     <p>
-      Midterm : Feb 10, in class
-      <!--
-      (<a href='midterm.pdf'>midterm</a>
-       <a href='midterm-soln.pdf'>soln</a>)
-      -->
+
+    TODO
+
     </p>
-    <p>
-      Final : (TBD, probably morning first day of finals week)
-    </p>
-
-<p>
-  Previous midterms:
-</p>
-<p>
-
-  <a href="old-exams/cse331-15au-midterm.pdf">15au</a> &nbsp; (<a
-     href="old-exams/cse331-15au-midterm-sol.pdf">solution</a>) <a
-     href="old-exams/15sp-midtermUnsolved.pdf">15sp</a> (<a
-     href="old-exams/15sp-midtermSolved.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-15wi-midterm.pdf">15wi</a> (<a
-     href="old-exams/cse331-15wi-midtermsol.pdf">solution</a>) &nbsp;<a
-     href="old-exams/14au-midtermUnsolved.pdf">14au</a> (<a
-     href="old-exams/14au-midtermSolved.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-sp14-midterm.pdf">14sp</a> (<a
-     href="old-exams/cse331-sp14-midterm-sol.pdf">solution</a>) &nbsp;<a
-     href="old-exams/14wi-midtermUnsolved.pdf">14wi</a> (<a
-     href="old-exams/14wi-midtermSolved.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-au13-midterm.pdf">13au</a> (<a
-     href="old-exams/cse331-au13-midterm-sol.pdf">solution</a>) <a
-     href="old-exams/13sp-exam1.pdf">13sp</a> (<a
-     href="old-exams/13sp-exam1-solutions.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-wi13-midterm.pdf">13wi</a> &nbsp;(<a
-     href="old-exams/cse331-wi13-midtermsol.pdf">solution</a>)&nbsp; <a
-     href="old-exams/12au-midterm.pdf">12au</a> (<a
-     href="old-exams/12au-midterm-sol.pdf">solution</a>) &nbsp;<a
-     href="old-exams/12sp-exam1.pdf">12sp</a> (<a
-     href="old-exams/12sp-exam1-solutions.pdf">solution</a>) &nbsp; <a
-     href="old-exams/12wi-exam1.pdf">12wi</a> (<a
-     href="old-exams/12wi-exam1-solutions.pdf">solution</a>)
-</p>
-
-<p>
-  Previous finals:
-</p>
-<p>
-
-  <a href="old-exams/cse331-15au-final.pdf">15au</a> &nbsp; (<a
-     href="old-exams/cse331-15au-final-sol.pdf">solution</a>) <a
-     href="old-exams/15sp-finalUnsolved.pdf">15sp</a> (<a
-     href="old-exams/15sp-finalSolved.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-15wi-final.pdf">15wi</a> (<a
-     href="old-exams/cse331-15wi-finalsol.pdf">solution</a>) <a
-     href="old-exams/14au-finalUnsolved.pdf">14au</a> (<a
-     href="old-exams/14au-finalSolved.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-14sp-final.pdf">14sp</a> (<a
-     href="old-exams/cse331-14sp-final-sol.pdf"> solution</a>)&nbsp; <a
-     href="old-exams/14wi-finalUnsolved.pdf">14wi</a> (<a
-     href="old-exams/14wi-finalSolved.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-au13-final.pdf">13au</a> (<a
-     href="old-exams/cse331-au13-final-sol.pdf">solution</a>) &nbsp;<a
-     href="old-exams/13sp-exam2.pdf">13sp</a> (<a
-     href="old-exams/13sp-exam2-solutions.pdf">solution</a>) &nbsp;<a
-     href="old-exams/cse331-wi13-final.pdf">13wi</a> &nbsp;(<a
-     href="old-exams/cse331-wi13-final-sol.pdf">solution</a>)&nbsp; <a
-     href="old-exams/12au-final.pdf">12au</a> (<a
-     href="old-exams/12au-final-sol.pdf">solution</a>) &nbsp;<a
-     href="old-exams/12sp-exam2.pdf">12sp</a> (<a
-     href="old-exams/12sp-exam2-solutions.pdf">solution</a>)&nbsp; <a
-     href="old-exams/12wi-exam2.pdf">12wi</a> (<a
-     href="old-exams/12wi-exam2-solutions.pdf">solution</a>)
-
-</p>
-
+    <table id='Homework-table'>
+      <!-- FROM SCHEDULE -->
+    </table>
   </div>
-  <div class='section' id='ref-div'>
-    <h2><a id='ref'></a>References</h2>
+  <div class='section' id='Exam'>
+    <h2><a id='Exam'></a>Exam</h2>
+    <p>
+
+    TODO
+
+    </p>
+    <table id='Exam-table'>
+      <!-- FROM SCHEDULE -->
+    </table>
+  </div>
+
+<!-- ********** -->
+
+  <div class='section' id='Reference'>
+    <h2><a id='Reference'></a>Reference</h2>
     <p>
       <b>Tools</b>
     </p><p>
@@ -576,8 +131,8 @@
         Debugging</a>
     </p>
   </div>
-  <div class='section' id='syllabus-div'>
-    <h2><a id='syllabus'></a>Syllabus</h2>
+  <div class='section' id='Syllabus'>
+    <h2><a id='Syllabus'></a>Syllabus</h2>
 <p>
 
   <strong>Goals:</strong> There is a level of programming maturity beyond
@@ -765,8 +320,8 @@
 </ul>
 
   </div>
-  <div class='section' id='integrity-div'>
-    <h2><a id='integrity'></a>Academic Integrity</h2>
+  <div class='section' id='Integrity'>
+    <h2><a id='Integrity'></a>Academic Integrity</h2>
 
 <p>
 
@@ -875,6 +430,75 @@
   </div>
 
 <script>
+$(document).ready(function() {
+  var today = new Date();
+
+  var dayName =
+    ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  var monthName =
+    [ "Jan", "Feb", "Mar", "Apr", "May", "Jun"
+    , "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+
+  function fmtDate(d) {
+    return dayName[d.getUTCDay()]
+           + ",&nbsp;"
+           + monthName[d.getMonth()]
+           + "&nbsp;"
+           + d.getDate();
+  }
+
+  $.getJSON("config.json", function(config) {
+    document.title = config.course + " " + config.term;
+    $("#title").text(config.course + ": " + config.title);
+
+    for(var i = 0; i < config.nav.length; i++) {
+      $("#nav-ul").append(
+        $("<li></li>")
+          .html(config.nav[i])
+      );
+    }
+
+    for(var i = 0; i < config.over.length; i++) {
+      var sect = config.over[i].sect;
+      var rows = config.over[i].rows;
+      for(var j = 0; j < rows.length; j++) {
+        $("#over-table").append(
+          $("<tr></tr>").append(
+            $("<td></td>")
+              .html(j == 0 ? sect : "")
+          ).append(
+            $("<td></td>")
+              .html(rows[j])
+          )
+        );
+      }
+    }
+  });
+
+  $.getJSON("sched-expanded.json", function(sched) {
+    for(var i = 0; i < sched.events.length; i++) {
+      var e = sched.events[i];
+      var d = new Date(e.start);
+      $("#" + e.catg + "-table").append(
+        $("<tr></tr>").append(
+          $("<td></td>")
+            .html(fmtDate(d))
+        ).append(
+          $("<td></td>")
+            .html(
+              e.url == ""
+                ? e.topic
+                : $("<a></a>")
+                    .text(e.topic)
+                    .attr('href', e.url)
+            )
+        )
+      );
+    }
+  });
+});
 
 </script>
 

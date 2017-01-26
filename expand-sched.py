@@ -32,7 +32,18 @@ class Event(object):
                 self.end = self.start
         else:
             # a date without time indicates whole day event
-            self.start = date
+            # construct date explicitly to include timezone
+            self.start = \
+              datetime( date.year
+                      , date.month
+                      , date.day
+                      , 0
+                      , 0
+                      , 0
+                      , 0
+                      , tzinfo = TZ
+                      )
+
             self.end = date + timedelta(1, 0)
 
         if num == -1:
@@ -49,8 +60,8 @@ class Event(object):
 
     def __str__(self):
         kvs = "\n, ".join([ '"catg"  : "%s"' % self.catg
-                          , '"start" : "%s"' % self.start.strftime("%Y-%m-%d %H:%M")
-                          , '"end"   : "%s"' % self.end.strftime("%Y-%m-%d %H:%M")
+                          , '"start" : "%s"' % self.start.isoformat()
+                          , '"end"   : "%s"' % self.end.isoformat()
                           , '"topic" : "%s"' % self.topic
                           , '"url"   : "%s"' % self.url
                           , '"room"  : "%s"' % self.room
@@ -105,6 +116,6 @@ def main():
 
     with open('sched-expanded.json', 'w') as f:
         eobjs = '\n,\n'.join([str(e) for e in events])
-        f.write('{ "sched" : [\n%s\n]}' % eobjs)
+        f.write('{ "events" : [\n%s\n]}' % eobjs)
 
 main()

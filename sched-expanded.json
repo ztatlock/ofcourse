@@ -1,487 +1,487 @@
-{ "sched" : [
+{ "events" : [
 { "catg"  : "Lecture"
-, "start" : "2017-01-04 10:30"
-, "end"   : "2017-01-04 11:20"
+, "start" : "2017-01-04T10:30:00-07:53"
+, "end"   : "2017-01-04T11:20:00-07:53"
 , "topic" : "01 Introduction"
 , "url"   : "Lecture01/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-06 10:30"
-, "end"   : "2017-01-06 11:20"
+, "start" : "2017-01-06T10:30:00-07:53"
+, "end"   : "2017-01-06T11:20:00-07:53"
 , "topic" : "02 Formal Reasoning"
 , "url"   : "Lecture02/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-09 10:30"
-, "end"   : "2017-01-09 11:20"
+, "start" : "2017-01-09T10:30:00-07:53"
+, "end"   : "2017-01-09T11:20:00-07:53"
 , "topic" : "03 Reasoning About Loops"
 , "url"   : "Lecture03/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-11 10:30"
-, "end"   : "2017-01-11 11:20"
+, "start" : "2017-01-11T10:30:00-07:53"
+, "end"   : "2017-01-11T11:20:00-07:53"
 , "topic" : "04 Specifications"
 , "url"   : "Lecture04/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-13 10:30"
-, "end"   : "2017-01-13 11:20"
+, "start" : "2017-01-13T10:30:00-07:53"
+, "end"   : "2017-01-13T11:20:00-07:53"
 , "topic" : "05 Abstract Data Types"
 , "url"   : "Lecture05/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-16 10:30"
-, "end"   : "2017-01-16 11:20"
+, "start" : "2017-01-16T10:30:00-07:53"
+, "end"   : "2017-01-16T11:20:00-07:53"
 , "topic" : "-- University Holiday"
 , "url"   : ""
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-18 10:30"
-, "end"   : "2017-01-18 11:20"
+, "start" : "2017-01-18T10:30:00-07:53"
+, "end"   : "2017-01-18T11:20:00-07:53"
 , "topic" : "06 Representation Invariants"
 , "url"   : "Lecture06/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-20 10:30"
-, "end"   : "2017-01-20 11:20"
+, "start" : "2017-01-20T10:30:00-07:53"
+, "end"   : "2017-01-20T11:20:00-07:53"
 , "topic" : "07 Abstraction Functions"
 , "url"   : "Lecture07/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-23 10:30"
-, "end"   : "2017-01-23 11:20"
+, "start" : "2017-01-23T10:30:00-07:53"
+, "end"   : "2017-01-23T11:20:00-07:53"
 , "topic" : "08 Testing"
 , "url"   : "Lecture08/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-25 10:30"
-, "end"   : "2017-01-25 11:20"
+, "start" : "2017-01-25T10:30:00-07:53"
+, "end"   : "2017-01-25T11:20:00-07:53"
 , "topic" : "09 Checker Framework"
 , "url"   : "Lecture09/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-27 10:30"
-, "end"   : "2017-01-27 11:20"
+, "start" : "2017-01-27T10:30:00-07:53"
+, "end"   : "2017-01-27T11:20:00-07:53"
 , "topic" : "10 Style and Design"
 , "url"   : "Lecture10/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-01-30 10:30"
-, "end"   : "2017-01-30 11:20"
+, "start" : "2017-01-30T10:30:00-07:53"
+, "end"   : "2017-01-30T11:20:00-07:53"
 , "topic" : "11 Equals and Hashcode"
 , "url"   : "Lecture11/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-01 10:30"
-, "end"   : "2017-02-01 11:20"
+, "start" : "2017-02-01T10:30:00-07:53"
+, "end"   : "2017-02-01T11:20:00-07:53"
 , "topic" : "12 Assertions and Exceptions"
 , "url"   : "Lecture12/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-03 10:30"
-, "end"   : "2017-02-03 11:20"
+, "start" : "2017-02-03T10:30:00-07:53"
+, "end"   : "2017-02-03T11:20:00-07:53"
 , "topic" : "13 Subtyping"
 , "url"   : "Lecture13/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-06 10:30"
-, "end"   : "2017-02-06 11:20"
+, "start" : "2017-02-06T10:30:00-07:53"
+, "end"   : "2017-02-06T11:20:00-07:53"
 , "topic" : "14 Generics 1"
 , "url"   : "Lecture14/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-08 10:30"
-, "end"   : "2017-02-08 11:20"
+, "start" : "2017-02-08T10:30:00-07:53"
+, "end"   : "2017-02-08T11:20:00-07:53"
 , "topic" : "15 Generics 2"
 , "url"   : "Lecture15/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-10 10:30"
-, "end"   : "2017-02-10 11:20"
+, "start" : "2017-02-10T10:30:00-07:53"
+, "end"   : "2017-02-10T11:20:00-07:53"
 , "topic" : "-- Midterm"
 , "url"   : ""
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-13 10:30"
-, "end"   : "2017-02-13 11:20"
+, "start" : "2017-02-13T10:30:00-07:53"
+, "end"   : "2017-02-13T11:20:00-07:53"
 , "topic" : "16 Debugging"
 , "url"   : "Lecture16/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-15 10:30"
-, "end"   : "2017-02-15 11:20"
+, "start" : "2017-02-15T10:30:00-07:53"
+, "end"   : "2017-02-15T11:20:00-07:53"
 , "topic" : "17 Events, Listeners, Callbacks"
 , "url"   : "Lecture17/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-17 10:30"
-, "end"   : "2017-02-17 11:20"
+, "start" : "2017-02-17T10:30:00-07:53"
+, "end"   : "2017-02-17T11:20:00-07:53"
 , "topic" : "18 Java Graphics and GUIs"
 , "url"   : "Lecture18/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-20 10:30"
-, "end"   : "2017-02-20 11:20"
+, "start" : "2017-02-20T10:30:00-07:53"
+, "end"   : "2017-02-20T11:20:00-07:53"
 , "topic" : "-- University Holiday"
 , "url"   : ""
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-22 10:30"
-, "end"   : "2017-02-22 11:20"
+, "start" : "2017-02-22T10:30:00-07:53"
+, "end"   : "2017-02-22T11:20:00-07:53"
 , "topic" : "19 Java GUI Events"
 , "url"   : "Lecture19/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-24 10:30"
-, "end"   : "2017-02-24 11:20"
+, "start" : "2017-02-24T10:30:00-07:53"
+, "end"   : "2017-02-24T11:20:00-07:53"
 , "topic" : "20 TBD"
 , "url"   : "Lecture20/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-02-27 10:30"
-, "end"   : "2017-02-27 11:20"
+, "start" : "2017-02-27T10:30:00-07:53"
+, "end"   : "2017-02-27T11:20:00-07:53"
 , "topic" : "21 Design Patterns 1"
 , "url"   : "Lecture21/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-03-01 10:30"
-, "end"   : "2017-03-01 11:20"
+, "start" : "2017-03-01T10:30:00-07:53"
+, "end"   : "2017-03-01T11:20:00-07:53"
 , "topic" : "22 Design Patterns 2"
 , "url"   : "Lecture22/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-03-03 10:30"
-, "end"   : "2017-03-03 11:20"
+, "start" : "2017-03-03T10:30:00-07:53"
+, "end"   : "2017-03-03T11:20:00-07:53"
 , "topic" : "23 System Development 1"
 , "url"   : "Lecture23/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-03-06 10:30"
-, "end"   : "2017-03-06 11:20"
+, "start" : "2017-03-06T10:30:00-07:53"
+, "end"   : "2017-03-06T11:20:00-07:53"
 , "topic" : "24 System Development 2"
 , "url"   : "Lecture24/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-03-08 10:30"
-, "end"   : "2017-03-08 11:20"
+, "start" : "2017-03-08T10:30:00-07:53"
+, "end"   : "2017-03-08T11:20:00-07:53"
 , "topic" : "25 Verifying Sytem Architectures"
 , "url"   : "Lecture25/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Lecture"
-, "start" : "2017-03-10 10:30"
-, "end"   : "2017-03-10 11:20"
+, "start" : "2017-03-10T10:30:00-07:53"
+, "end"   : "2017-03-10T11:20:00-07:53"
 , "topic" : "26 Conclusion"
 , "url"   : "Lecture26/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-01-05 00:00"
-, "end"   : "2017-01-06 00:00"
+, "start" : "2017-01-05T00:00:00-07:53"
+, "end"   : "2017-01-06T00:00:00"
 , "topic" : "01 Hoare Logic and Git"
 , "url"   : "Section01/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-01-12 00:00"
-, "end"   : "2017-01-13 00:00"
+, "start" : "2017-01-12T00:00:00-07:53"
+, "end"   : "2017-01-13T00:00:00"
 , "topic" : "02 Project Setup"
 , "url"   : "Section02/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-01-19 00:00"
-, "end"   : "2017-01-20 00:00"
+, "start" : "2017-01-19T00:00:00-07:53"
+, "end"   : "2017-01-20T00:00:00"
 , "topic" : "03 ADTs and Homework 4"
 , "url"   : "Section03/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-01-26 00:00"
-, "end"   : "2017-01-27 00:00"
+, "start" : "2017-01-26T00:00:00-07:53"
+, "end"   : "2017-01-27T00:00:00"
 , "topic" : "04 Graphs and Testing"
 , "url"   : "Section04/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-02-02 00:00"
-, "end"   : "2017-02-03 00:00"
+, "start" : "2017-02-02T00:00:00-07:53"
+, "end"   : "2017-02-03T00:00:00"
 , "topic" : "05 Interfaces and Homework 6"
 , "url"   : "Section05/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-02-09 00:00"
-, "end"   : "2017-02-10 00:00"
+, "start" : "2017-02-09T00:00:00-07:53"
+, "end"   : "2017-02-10T00:00:00"
 , "topic" : "06 Midterm Review"
 , "url"   : "Section06/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-02-16 00:00"
-, "end"   : "2017-02-17 00:00"
+, "start" : "2017-02-16T00:00:00-07:53"
+, "end"   : "2017-02-17T00:00:00"
 , "topic" : "07 Dijkstra's Algorithm"
 , "url"   : "Section07/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-02-23 00:00"
-, "end"   : "2017-02-24 00:00"
+, "start" : "2017-02-23T00:00:00-07:53"
+, "end"   : "2017-02-24T00:00:00"
 , "topic" : "08 Model View Controller"
 , "url"   : "Section08/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-03-02 00:00"
-, "end"   : "2017-03-03 00:00"
+, "start" : "2017-03-02T00:00:00-07:53"
+, "end"   : "2017-03-03T00:00:00"
 , "topic" : "09 Design Patterns"
 , "url"   : "Section09/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Section"
-, "start" : "2017-03-09 00:00"
-, "end"   : "2017-03-10 00:00"
+, "start" : "2017-03-09T00:00:00-07:53"
+, "end"   : "2017-03-10T00:00:00"
 , "topic" : "10 Final Review"
 , "url"   : "Section10/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-01-07 23:00"
-, "end"   : "2017-01-07 23:00"
+, "start" : "2017-01-07T23:00:00-07:53"
+, "end"   : "2017-01-07T23:00:00-07:53"
 , "topic" : "01 Get Books"
 , "url"   : "Reading01/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-01-14 23:00"
-, "end"   : "2017-01-14 23:00"
+, "start" : "2017-01-14T23:00:00-07:53"
+, "end"   : "2017-01-14T23:00:00-07:53"
 , "topic" : "02 Pragmatic Programmer Chapter 1"
 , "url"   : "Reading02/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-01-21 23:00"
-, "end"   : "2017-01-21 23:00"
+, "start" : "2017-01-21T23:00:00-07:53"
+, "end"   : "2017-01-21T23:00:00-07:53"
 , "topic" : "03 Pragmatic Programmer Chapter 2"
 , "url"   : "Reading03/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-01-28 23:00"
-, "end"   : "2017-01-28 23:00"
+, "start" : "2017-01-28T23:00:00-07:53"
+, "end"   : "2017-01-28T23:00:00-07:53"
 , "topic" : "04 TBD"
 , "url"   : "Reading04/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-02-04 23:00"
-, "end"   : "2017-02-04 23:00"
+, "start" : "2017-02-04T23:00:00-07:53"
+, "end"   : "2017-02-04T23:00:00-07:53"
 , "topic" : "05 TBD"
 , "url"   : "Reading05/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-02-11 23:00"
-, "end"   : "2017-02-11 23:00"
+, "start" : "2017-02-11T23:00:00-07:53"
+, "end"   : "2017-02-11T23:00:00-07:53"
 , "topic" : "06 TBD"
 , "url"   : "Reading06/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-02-18 23:00"
-, "end"   : "2017-02-18 23:00"
+, "start" : "2017-02-18T23:00:00-07:53"
+, "end"   : "2017-02-18T23:00:00-07:53"
 , "topic" : "07 TBD"
 , "url"   : "Reading07/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-02-25 23:00"
-, "end"   : "2017-02-25 23:00"
+, "start" : "2017-02-25T23:00:00-07:53"
+, "end"   : "2017-02-25T23:00:00-07:53"
 , "topic" : "08 TBD"
 , "url"   : "Reading08/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-03-04 23:00"
-, "end"   : "2017-03-04 23:00"
+, "start" : "2017-03-04T23:00:00-07:53"
+, "end"   : "2017-03-04T23:00:00-07:53"
 , "topic" : "09 TBD"
 , "url"   : "Reading09/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Reading"
-, "start" : "2017-03-11 23:00"
-, "end"   : "2017-03-11 23:00"
+, "start" : "2017-03-11T23:00:00-07:53"
+, "end"   : "2017-03-11T23:00:00-07:53"
 , "topic" : "10 TBD"
 , "url"   : "Reading10/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Exam"
-, "start" : "2017-02-10 10:30"
-, "end"   : "2017-02-10 11:20"
+, "start" : "2017-02-10T10:30:00-07:53"
+, "end"   : "2017-02-10T11:20:00-07:53"
 , "topic" : "01 Midterm"
 , "url"   : "Exam01/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Exam"
-, "start" : "2017-03-13 08:30"
-, "end"   : "2017-03-13 10:20"
+, "start" : "2017-03-13T08:30:00-07:53"
+, "end"   : "2017-03-13T10:20:00-07:53"
 , "topic" : "02 Final"
 , "url"   : "Exam02/"
 , "room"  : "HCK 132"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-01-09 10:00"
-, "end"   : "2017-01-09 10:00"
+, "start" : "2017-01-09T10:00:00-07:53"
+, "end"   : "2017-01-09T10:00:00-07:53"
 , "topic" : "01 Correctness"
 , "url"   : "Homework01/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-01-13 23:00"
-, "end"   : "2017-01-13 23:00"
+, "start" : "2017-01-13T23:00:00-07:53"
+, "end"   : "2017-01-13T23:00:00-07:53"
 , "topic" : "02 Hoare Logic Basics"
 , "url"   : "Homework02/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-01-18 23:00"
-, "end"   : "2017-01-18 23:00"
+, "start" : "2017-01-18T23:00:00-07:53"
+, "end"   : "2017-01-18T23:00:00-07:53"
 , "topic" : "03 Hoare Logic Loops"
 , "url"   : "Homework03/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-01-23 23:00"
-, "end"   : "2017-01-23 23:00"
+, "start" : "2017-01-23T23:00:00-07:53"
+, "end"   : "2017-01-23T23:00:00-07:53"
 , "topic" : "04 Environment Setup and Java Introduction"
 , "url"   : "Homework04/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-01-30 23:00"
-, "end"   : "2017-01-30 23:00"
+, "start" : "2017-01-30T23:00:00-07:53"
+, "end"   : "2017-01-30T23:00:00-07:53"
 , "topic" : "05 Java and Coding to Specifications"
 , "url"   : "Homework05/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-02-07 23:00"
-, "end"   : "2017-02-07 23:00"
+, "start" : "2017-02-07T23:00:00-07:53"
+, "end"   : "2017-02-07T23:00:00-07:53"
 , "topic" : "06 Designing and Implementing an ADT"
 , "url"   : "Homework06/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-02-14 23:00"
-, "end"   : "2017-02-14 23:00"
+, "start" : "2017-02-14T23:00:00-07:53"
+, "end"   : "2017-02-14T23:00:00-07:53"
 , "topic" : "07 Modeling the Marvel Comics Universe"
 , "url"   : "Homework07/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-02-22 23:00"
-, "end"   : "2017-02-22 23:00"
+, "start" : "2017-02-22T23:00:00-07:53"
+, "end"   : "2017-02-22T23:00:00-07:53"
 , "topic" : "08 Generics and Least-Cost Paths"
 , "url"   : "Homework08/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-03-01 23:00"
-, "end"   : "2017-03-01 23:00"
+, "start" : "2017-03-01T23:00:00-07:53"
+, "end"   : "2017-03-01T23:00:00-07:53"
 , "topic" : "09 Model-View-Controller and Campus Paths"
 , "url"   : "Homework09/"
 , "room"  : "UW Seattle"
 }
 ,
 { "catg"  : "Homework"
-, "start" : "2017-03-08 23:00"
-, "end"   : "2017-03-08 23:00"
+, "start" : "2017-03-08T23:00:00-07:53"
+, "end"   : "2017-03-08T23:00:00-07:53"
 , "topic" : "10 Campus Paths GUI"
 , "url"   : "Homework10/"
 , "room"  : "UW Seattle"

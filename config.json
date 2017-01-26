@@ -1,0 +1,70 @@
+{ "course" : "CSE 331"
+, "title" : "Software Design and Implementation"
+, "term" : "2017 Winter"
+, "nav" :
+    [ "<a href='https://piazza.com/washington/winter2017/cse331/home'>Piazza</a>"
+    , "<a href='calendar.html'>Calendar</a>"
+    , "<a href='#Lecture'>Lecture</a>"
+    , "<a href='#Section'>Section</a>"
+    , "<a href='#Reading'>Reading</a>"
+    , "<a href='#Homework'>Homework</a>"
+    , "<a href='#Exam'>Exam</a>"
+    , "<a href='#Resources'>Resources</a>"
+    ]
+, "over"   :
+    [ { "sect" : "Lecture"
+      , "rows" : [ "Mon, Wed, Fri 10:30am in HCK 132" ]
+      }
+    , { "sect" : "Section"
+      , "rows" : [ "AA : Thu  8:30am in MGH 251"
+                 , "AB : Thu  9:30am in SAV 131"
+                 , "AC : Thu 10:30am in CHL 015"
+                 , "AD : Thu 11:30am in MGH 287"
+                 ]
+      }
+    , { "sect" : "Instructor"
+      , "rows" : [ "Zach Tatlock (ztatlock@cs)"
+                 , "Wed 11:30am in CSE 546"
+                 ]
+      }
+    , { "sect" : "TAs"
+      , "rows" : [ "Christopher Chen (chrisc94@cs)"
+                 , "Thu 2:30 in CSE 006"
+                 , ""
+                 , "Viktor Farkas (vfarkas@cs)"
+                 , "Mon 11:30 in CSE 006"
+                 , ""
+                 , "Cody Kesting (kesting@cs)"
+                 , "Wed 5:30 in CSE 021"
+                 , ""
+                 , "Chen (Jason) Qiu (chenq9@cs)"
+                 , "Tue 4:00 in CSE 006"
+                 , ""
+                 , "Matthew Yang (mattyang@cs)"
+                 , "Fri 4:00 in CSE 006"
+                 , ""
+                 , "Lucy Zhu (lucyzhu@cs)"
+                 , "Tue 10:30 in CSE 006"
+                 , ""
+                 , "Garrett Marconet (gmarco@cs)"
+                 , "Mon 3:30 in CSE 006"
+                 , ""
+                 , "Zhengyang Gao (gaoz6@uw)"
+                 , "Fri 3:30 in CSE 006"
+                 , ""
+                 , "Qian Yan (qiany7@cs)"
+                 , "Tue 3:00 in CSE 006"
+                 ]
+      }
+    , { "sect" : "<a name='Resources'></a>Resources"
+      , "rows" : [ "<a href='https://piazza.com/washington/winter2017/cse331/home'>Piazza</a>"
+                 , "<a href='calendar.html'>Calendar</a>"
+                 , "<a href='https://catalyst.uw.edu/collectit/dropbox/ztatlock/39539'>Catalyst Dropbox</a>"
+                 , "<a href='https://catalyst.uw.edu/gradebook/ztatlock/100310'>Catalyst Gradebook</a>"
+                 , "<a href='#Reference'>Reference</a>"
+                 , "<a href='#Syllabus'>Syllabus</a>"
+                 , "<a href='#Integrity'>Academic Integrity</a>"
+                 ]
+      }
+    ]
+}
